@@ -1,4 +1,4 @@
-body {
+html {
     margin: 0;
     height: 100vh;
     background-image: url("https://media.istockphoto.com/id/1442078194/photo/nurse-assisting-a-patient-in-remission-leaving-the-hospital.jpg?s=612x612&w=0&k=20&c=gOWOGnJlNqgoU1FHSWG5DPCn0olVga3uQdlXA7jTNpI=");
@@ -8,11 +8,10 @@ body {
     font-weight: bold;
     text-align: center;
     color: #fff;
-    text-shadow: 0 0 4px black;
+    text-shadow: 0 0 8px black;
 }
 .main {
     margin: 0 auto;
-    font-family: Roboto;
 }
 
 .buttons {
