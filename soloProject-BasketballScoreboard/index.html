@@ -10,11 +10,26 @@
     <div class="container">
         <div>
             <h3>HOME</h3>
+            <p id="home-p">0</p>
+            <div class="btns">
+                <button onclick="homePlusOne()">+1</button>
+                <button onclick="homePlusTwo()">+2</button>
+                <button onclick="homePlusThree()">+3</button>
+            </div>
         </div>
+        
         <div>
             <h3>GUEST</h3>
+            <p id="guest-p">0</p>
+            <div class="btns">
+                <button onclick="guestPlusOne()">+1</button>
+                <button onclick="guestPlusTwo()">+2</button>
+                <button onclick="guestPlusThree()">+3</button>
+            </div>
         </div>
+
     </div>
+    <button class="new-game" onclick="newGame()">New game</button>
     <script src="index.js"></script>
 </body>
 </html>

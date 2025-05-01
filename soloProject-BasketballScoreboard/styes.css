@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'CursedTimer';
+    src: url('./assets/fonts/CursedTimerULiL.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 body {
     margin: 0;
     padding: 0;
@@ -8,8 +15,45 @@ body {
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    max-width: 720px;
-    min-height: 500px;
+    max-width: 575px;
+    min-height: 385px;
     background-color: #1B244A;
+    color: #EEEEEE;
     border: 1px solid black;
+    font-family: "CursedTimer", monospace;;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+}
+
+p {
+    color: #F94F6D;
+    background-color: #080001;
+    font-size: 7rem;
+    margin: 0;
+    padding: 20px;
+}
+
+button {
+    font-family: inherit;
+    font-size: 2rem;
+    background-color: inherit;
+    color: #9AABD8;
+    border: 1px solid #9AABD8;
+    margin: 2px;
+    padding: 1px;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.btns {
+    margin: 2rem;
+}
+
+.new-game {
+    color: #F94F6D;
 }
