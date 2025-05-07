@@ -4,11 +4,12 @@ body {
 
     background-color: #1C1C1C;
     color: #ffffff;
+
+    font-family: "Inter", sans-serif;
 }
 
 main {
     margin: 0 auto;
-    padding: 50px;
     text-align: left;
     width: 550px;
     height: 550px;
@@ -17,14 +18,18 @@ main {
 
 h1 {
     font-size: 3rem;
-    padding-bottom: 0;
+    padding: 0;
+    margin: 90px 0 10px;
+    font-family: "Karla", sans-serif;
+    font-weight: 900;
 }
 
 .sub-text {
+    font-weight: 200;
 }
 
 h1 > span {
-    padding-bottom: 0;
+    padding: 0;
     color: #4ADF86;
     display: inline-block;
 }
@@ -34,16 +39,15 @@ button {
     color: inherit;
     border: none;
     font-size: 1.2rem;
-    padding: 10px;
+    margin: 50px 0 20px;
+    padding: 15px;
     border-radius: 6px;
 }
 
-button::after {
-    content: "";
-    padding-bottom: 5px;
-    background-color: #2F3E53;
-    width: 90%;
-    height: 1px;
+section {
+    padding: 20px;
+    margin: 20px;
+    border-bottom: 1px solid #2F3E53;
 }
 
 .container {
@@ -55,8 +59,9 @@ button::after {
     border: none;
     color: #55F991;
     background-color: #273549;
+    text-align:center;
     width: 210px;
-    padding: 10px;
+    padding: 10px ;
     margin: 2px;
     border-radius: 6px;
 }
