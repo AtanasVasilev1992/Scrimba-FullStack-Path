@@ -5,3 +5,58 @@ body {
     background-color: #1C1C1C;
     color: #ffffff;
 }
+
+main {
+    margin: 0 auto;
+    padding: 50px;
+    text-align: left;
+    width: 550px;
+    height: 550px;
+    background-color: #1F2937;
+}
+
+h1 {
+    font-size: 3rem;
+    padding-bottom: 0;
+}
+
+.sub-text {
+}
+
+h1 > span {
+    padding-bottom: 0;
+    color: #4ADF86;
+    display: inline-block;
+}
+
+button {
+    background-color: #10B981;
+    color: inherit;
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+button::after {
+    content: "";
+    padding-bottom: 5px;
+    background-color: #2F3E53;
+    width: 90%;
+    height: 1px;
+}
+
+.container {
+    display: flex;
+    justify-self: center;
+}
+
+.generated-pass {
+    border: none;
+    color: #55F991;
+    background-color: #273549;
+    width: 210px;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 6px;
+}
