@@ -9,18 +9,16 @@ const generateBtn = document.getElementById("generate-btn");
 const p1El = document.getElementById("p1");
 const p2El = document.getElementById("p2");
 
-let passwordLenght = 15;
-
-
 generateBtn.addEventListener("click", function(){
-    p1El.textContent = generateRandomPassword()
+    let passwordLenght = Number(document.getElementById("password-length").value);
+    p1El.value = generateRandomPassword(passwordLenght)
 
-    p2El.textContent = generateRandomPassword()
+    p2El.value = generateRandomPassword(passwordLenght)
 })
 
-function generateRandomPassword() {
+function generateRandomPassword(passLength) {
     let password = ""
-    for (let i = 0; i < passwordLenght; i++) {
+    for (let i = 0; i < passLength - 1; i++) {
         password += characters[getRandomChar()]
     }
 
@@ -28,5 +26,5 @@ function generateRandomPassword() {
 }
 
 function getRandomChar() {
-    return Math.floor( Math.random() * characters.length ) + 1;
+    return Math.floor( Math.random() * characters.length );
 }

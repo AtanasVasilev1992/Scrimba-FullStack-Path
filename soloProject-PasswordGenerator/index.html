@@ -15,11 +15,15 @@
             <h1>Generate a <span>random password</span></h1>
             <p class="sub-text">Never use an insecure password again.</p>
             <button id="generate-btn">Generate passwords</button>
+            <div class="container">
+                <label for="password-length">Set password length:</label>
+                <input type="number" id="password-length" name="password-length"  min="10" max="20" value="15">
+            </div>
         </section>
 
         <div class="container">
-            <p id="p1" class="generated-pass">-</p>
-            <p id="p2" class="generated-pass">-</p>
+            <input type="text" class="generated-pass" id="p1">
+            <input type="text" class="generated-pass" id="p2">
         </div>
         
     </main>

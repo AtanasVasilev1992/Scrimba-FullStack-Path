@@ -53,15 +53,24 @@ section {
 .container {
     display: flex;
     justify-self: center;
+    gap: 10px;
 }
 
-.generated-pass {
+label {
+    font-size: 1rem;
+    color: #55F991;
+}
+
+input {
     border: none;
     color: #55F991;
     background-color: #273549;
     text-align:center;
-    width: 210px;
     padding: 10px ;
     margin: 2px;
     border-radius: 6px;
+}
+
+.generated-pass {
+    width: 210px;
 }
