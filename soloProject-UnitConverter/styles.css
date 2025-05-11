@@ -4,24 +4,67 @@ body {
     background-color: #1C1C1C;
     color: #F4F4F4;
     width: 550px;
-    height: 750px;
+    height: auto;
     text-align: center;
 }
 
-.header {
+main {
     background-color: #6943FF;
+}
+
+.header {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .content {
     background-color: #1F2937;
+    padding: 10px;
 }
 
 section {
     background-color: #273549;
+    text-align: center;
 }
 
-h2 {
+section > h2 {
+    padding: 10px 0 5px;
     color: #CCC1FF;
+}
+
+section > p {
+    padding-bottom: 10px;
+}
+
+button {
+    border: none;
+    width: 120px;
+    padding:10px 5px;
+    margin: 10px;
+    border-radius: 6px;
+}
+
+#convert-num {
+    font-size: 2rem;
+    color: inherit;
+    background-color: transparent;
+    border: 1px solid #F4F4F4;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+ input[type="number"] {
+    width: 75px;
+    position: relative;
+    display: block;
+    margin : 10px auto;
+    padding: 5px;
+    text-align: center;
+    -moz-appearance: textfield;
 }
