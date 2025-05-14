@@ -4,6 +4,12 @@ body {
     text-align: center;
     width: 750px;
     color: #1D3557;
+    background-color: #E5E5E5;
+}
+
+main {
+    background-color: #fff;
+    padding-bottom: 10px;
 }
 
 .hero {
@@ -25,15 +31,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 .cards {
-    margin: 0;
     padding: 0;
    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+     margin: 10px;
+  text-align: center;
+  flex: 0 1 auto;
 
 }
 
@@ -45,7 +53,7 @@ img {
 }
 
 .guide {
-    margin: 0 auto;
+    margin: 50px auto;
     background-color: #A8DADC;
     width: 400px;
     height: 300px;
@@ -59,7 +67,7 @@ img {
     width: 200px;
     height: 300px;
     border-radius: 0;
-    margin: 5px;
+    margin: 10px 10px;
 }
 
 h1 {
@@ -76,8 +84,14 @@ h2 {
     border-radius: 6px;
 }
 
+h3 {
+    margin: 0;
+    padding: 25px 0;
+}
+
 
 footer {
+    padding: 10px;
     background-color: #457B9D;
     color: #ffffff;
 }
