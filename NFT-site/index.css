@@ -9,20 +9,24 @@ body {
 
 /* typography */
 
-h1 {
-    color: whitesmoke;
-    font-size: 3rem;
+h1,
+h3 {
     margin: 0;
 }
 
-h2 {
-    margin: 0;
+h1 {
+    color: whitesmoke;
+    font-size: 3rem;
 }
+
+h2 {
+    margin-top: 0;
+}
+
 
 h3 {
     color: #d0aaff;
     font-size: 1.25rem;
-    margin: 0;
 }
 
 /* links */
@@ -39,20 +43,21 @@ a:active {
 
 /* layout */
 
-header {
-    background-color: #5f29a3;
+header,
+section,
+footer {
     padding: 45px 0;
 }
 
-section {
-    padding: 45px 0;
+header,
+.section-two {
+    background-color: #5f29a3;
 }
 
 footer {
     text-align: center;
     font-size: 1rem;
     color: #5f29a3;
-    padding: 45px 0;
 }
 
 
@@ -63,7 +68,6 @@ footer {
 
 .section-two {
     color: whitesmoke;
-    background-color: #5f29a3;
 }
 
 .section-two-image-container {
