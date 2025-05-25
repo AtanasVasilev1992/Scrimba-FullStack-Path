@@ -41,6 +41,7 @@ header{
 }
 
 .tweet-input-area {
+    font-family: inherit;
     display: flex;
     align-items: flex-start;
     gap: 10px;
