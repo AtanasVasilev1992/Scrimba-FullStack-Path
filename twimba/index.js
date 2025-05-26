@@ -1,7 +1,7 @@
 import { tweetsData } from './data.js'
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
-const tweetInput = document.getElementById('tweet-input')
+
 
 document.addEventListener('click', function(e){
     let dataSet = e.target.dataset
@@ -49,8 +49,9 @@ function handleReplyClick(replyId){
 }
 
 function handleTweetBtnClick(){
+    const tweetInput = document.getElementById('tweet-input')
     const tweet = {
-         handle: `@Scrimba `,
+        handle: `@Scrimba `,
         profilePic: `images/scrimbalogo.png`,
         likes: 0,
         retweets: 0,
@@ -60,8 +61,13 @@ function handleTweetBtnClick(){
         isRetweeted: false,
         uuid: uuidv4(),
     }
+
+    if (tweetInput.value) {
     tweetsData.unshift(tweet)
+    }
+
     render()
+    tweetInput.value = ''
 }
 
 function getTweet(tweetId) {
