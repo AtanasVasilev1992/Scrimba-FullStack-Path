@@ -16,22 +16,33 @@ h3 {
 
 h1 {
     color: whitesmoke;
-    font-size: 3rem;
+    font-size: 1.75rem;
 }
 
 h2 {
+    color: #451c7a;
+    font-size: 1.375rem; /* update initial font-size */
     margin-top: 0;
 }
 
-
 h3 {
-    color: #d0aaff;
     font-size: 1.25rem;
 }
 
 p {
     line-height: 1.5;
 }
+
+.subheading {
+    display: block;
+    font-size: 1rem; /* update initial font-size */
+    color: #d0aaff;
+}
+
+.section-two h2 {
+    color: inherit;
+}
+
 
 /* links */
 
@@ -50,7 +61,7 @@ a:active {
 header,
 section,
 footer {
-    padding: 2.875em 0;
+    padding: 1.25em 0;
 }
 
 header,
@@ -75,30 +86,26 @@ footer {
     color: whitesmoke;
 }
 
-.section-two-image-container {
-    display: flex;
-    justify-content: space-between;
-}
-
 .main-image {
     width:100%;
 }
 
 .feature-image {
-    width: 48%;
+    width: 100%;
     border-radius: 4.6px;
+    margin: 0.3em;
 }
 
 /* buttons */
 .btn {
     font-size: 1.125rem;
     padding: 0.5em 1em;
-    margin-right: 0.5em;
     margin-bottom: 1em;
     border-radius: 4.6px;
     font-weight: 500;
     text-decoration: none;
-    display: inline-block;
+    display: block;
+    text-align: center;
 }
 
 .btn:hover,
@@ -118,4 +125,46 @@ footer {
 }
 .btn-ligth {
     background-color: whitesmoke;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media (min-width: 480px) {
+    .section-two-image-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .feature-image {
+        width: 48%;     
+    }
+}
+
+@media (min-width: 768px) {
+    .btn {
+        display: inline-block;
+        margin-right: 0.5em;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .subheading {
+        font-size: 1.25rem;
+    }
+    
+    p {
+        font-size: 1.125rem;
+    }
+
+    header, 
+    section, 
+    footer {
+        padding: 2.875em 0;
+    }
 }
