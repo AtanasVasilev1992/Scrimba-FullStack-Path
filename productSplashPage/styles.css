@@ -85,12 +85,45 @@ p {
     Form
    ================= */
 
-input {
+input,
+button {
+    font-family: inherit;
     width: 100%;
-    padding: 0.5em;
-    margin-bottom: 0.75em;
+    border-radius: 5px;
 }
 
+input {
+    padding: 0.5em;
+    margin-bottom: 0.75em;
+    border: 2px solid #d1d5db;
+}
+
+input:focus {
+    outline: none;
+    border-color: #8a71ec;
+    background-color: #e6e8ec;
+}
+
+.btn {
+    border: none;
+    width: 100%;
+    padding: 1em 0;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #8a71ec;
+    margin-top: 1em;    
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #b7a7f6;
+}
 /* =================
     Media queries 
    ================= */
