@@ -4,6 +4,12 @@ body {
     margin: 0;
 }
 
+*,
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
 /* =================
     Typography 
    ================= */
@@ -35,9 +41,26 @@ p {
 }
 
 .beta-text,
+.top-text,
 .subheading {
     text-transform: uppercase;
 }
+
+.top-text {
+    font-size: 0.875rem;
+    font-weight: 900;
+    padding-top: 0.25em;
+    border-top: 5px solid;
+    order: -1;
+    margin: 0 auto;
+}
+
+.fine-print {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #858585;
+}
+
 
 /* =================
     Flex containers
@@ -56,13 +79,14 @@ p {
    ================= */
 
 .intro { 
-    justify-content: center;
+    justify-content: space-between;
     min-height: 250px;
     text-align: center;
     color: #fff;
     background-color: #9480e4;
     background-image: url('images/intro-bg.png');
     background-size: cover;
+    padding-bottom: 1.5em;
 }
 
 /* ====================
@@ -79,6 +103,11 @@ p {
     height: auto;
     aspect-ratio: 1/1;
     border-radius: 50%;
+}
+
+.main-content p,
+form {
+    max-width: 450px;
 }
 
 /* =================
