@@ -21,7 +21,7 @@ main {
 @media (min-width: 500px) {
 
     main {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     } 
     .technology {
         grid-column: span 2;
@@ -32,6 +32,33 @@ main {
     .health {
         grid-column: span 2;
     }  
+}
+
+@media (min-width: 870px) {
+
+    main {
+        grid-template-columns: repeat(12, 1fr)
+    }
+    
+    .technology {
+        grid-column: 1 / 7;
+    }
+    
+    .environment {
+        grid-column: 7 / 10;
+    }
+     
+    .nasa {
+        grid-column: 10 / -1;
+    }
+    
+    .physics { 
+        grid-column: 1 / 4;
+    }
+    
+    .health {
+        grid-column: 4 / 10;
+    }
 }
 
 /* =================
