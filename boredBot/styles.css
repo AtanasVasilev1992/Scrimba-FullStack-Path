@@ -1,4 +1,9 @@
 body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
     /* Gradient */
     background: #c2e59c;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
@@ -19,6 +24,6 @@ button {
     width: 100px;
     border-radius: 50%;
     background-color: blue;
-    border: 1px solid blueviolet;
+    border: 2px solid blueviolet;
     cursor: pointer;
 }
