@@ -30,6 +30,23 @@ newPost.addEventListener("submit", (e)=> {
         title: postTitle,
         body: postBody
     }
+
+    const options = {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json",
+        }
+    }
     
-    console.log(data)
+    fetch( `${baseUrl}/posts`, options)
+        .then(res => res.json())
+        .then(post => 
+            blogList.innerHTML = `
+                <h3>${post.title}</h3>
+                <p>${post.body}</p>
+                <hr />
+                ${blogList.innerHTML}
+            `
+        )
 })
