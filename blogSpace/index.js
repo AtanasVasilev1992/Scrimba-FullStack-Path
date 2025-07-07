@@ -11,8 +11,8 @@ function renderPosts() {
 
     for (const post of postsArr) {
         html += `
-            <h3>${post.title}</h3>
-            <p>${post.body}</p>
+            <h3>${escapeHTML(post.title)}</h3>
+            <p>${escapeHTML(post.body)}</p>
             <hr/>
             `;
     }
@@ -56,3 +56,12 @@ newPost.addEventListener("submit", (e)=> {
             newPost.reset();
         });
 })
+
+function escapeHTML(str) {
+    return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
