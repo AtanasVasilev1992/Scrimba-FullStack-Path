@@ -11,9 +11,11 @@ function renderPosts() {
 
     for (const post of postsArr) {
         html += `
+        <div class="card">
             <h3>${escapeHTML(post.title)}</h3>
             <p>${escapeHTML(post.body)}</p>
             <hr/>
+        </div>
             `;
     }
 
