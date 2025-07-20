@@ -22,6 +22,10 @@ main {
     justify-content: space-between;
 }
 
+h1 {
+    font-size: 5em;
+}
+
 div.top {
     display: flex;
     justify-content: space-between;

@@ -18,15 +18,24 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     .then(res => res.json())
     .then(data => {
         body.style.backgroundImage = `url(${data.urls.regular})`
-		author.textContent = `By: ${data.user.name}`
-        author.innerHTML += `
-        <p>${data.exif.make}<p>
-        <p>${data.location.name}<p>
-        `
+        
+        if (data.exif.make) {
+            author.innerHTML += `
+            <p>📸 ${data.exif.make}<p>
+            `;
+        }
+        
+        if (data.location.name) {
+            author.innerHTML += `
+            <p>🌍 ${data.location.name}<p>
+            `;
+        }
+
+        author.innerHTML += `<p>By: ${data.user.name}<p>`
     })
     .catch(err => {
         body.style.backgroundImage = `url(https://images.unsplash.com/photo-1560008511-11c63416e52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMTEwMjl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjI4NDIxMTc&ixlib=rb-1.2.1&q=80&w=1080)`;
-		author.textContent = `By: Dodi Achmad`;
+		author.textContent = `👤 Dodi Achmad`;
     });
 
 
@@ -59,7 +68,7 @@ navigator.geolocation.getCurrentPosition(position => {
             const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
             weather.innerHTML = `
                 <img src=${iconUrl} />
-                <p class="weather-temp">${Math.round(data.main.temp)}º</p>
+                <p class="weather-temp">${Math.round(data.main.temp)}ºC</p>
                 <p class="weather-city">${data.name}</p>
             `
         })
