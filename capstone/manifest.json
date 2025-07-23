@@ -8,5 +8,14 @@
     },
     "chrome_url_overrides": {
         "newtab": "index.html"
+    },
+    "icons": {
+        "48": "icon.png"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "atanas.vasilev1992@gmail.com",
+            "strict_min_version": "109.0"
+        }
     }
 }
