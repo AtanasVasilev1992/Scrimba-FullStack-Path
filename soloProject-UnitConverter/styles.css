@@ -67,5 +67,5 @@ input::-webkit-inner-spin-button {
     margin : 10px auto;
     padding: 5px;
     text-align: center;
-    -moz-appearance: textfield;
+    appearance: textfield;
 }
