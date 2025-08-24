@@ -1,24 +1,16 @@
-import { getData } from '../utils/getData.js'
-import { sendResponse } from '../utils/sendResponse.js'
-import { parseJSONBody } from '../utils/parseJSONBody.js'
-import { addNewSighting } from '../utils/addNewSighting.js'
-import { sanitizeInput } from '../utils/sanitizeInput.js'
+import sanitizeHtml from 'sanitize-html' 
 
-export async function handleGet(res) {
-  const data = await getData()
-  const content = JSON.stringify(data)
-  sendResponse(res, 200, 'application/json', content)
-}
+export function sanitizeInput(data) {
 
-export async function handlePost(req, res) {
+  const sanitizedData = {}
 
-  try {
-    const parsedBody = await parseJSONBody(req)
-    const sanitizedBody = sanitizeInput(parsedBody)
-    await addNewSighting(sanitizedBody)
-    sendResponse(res, 201, 'application/json', JSON.stringify(sanitizedBody))
-  } catch (err) {
-    sendResponse(res, 400, 'application/json', JSON.stringify({error: err}))
+  for (const [key, value] of Object.entries(data)) {
+    if (typeof value === 'string') {
+      sanitizedData[key] = sanitizeHtml(value, { allowedTags: ['b'], allowedAttributes: {}})
+    } else {
+      sanitizedData[key] = value
+    }
   }
 
+  return sanitizedData
 }
