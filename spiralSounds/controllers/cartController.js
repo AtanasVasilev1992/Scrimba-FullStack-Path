@@ -22,3 +22,12 @@ export async function addToCart(req, res) {
  res.json({ message: 'Added to cart' })
 
 }
+
+export async function getCartCount(req, res) {
+  const db = await getDBConnection();
+
+   const result = await db.get(`SELECT SUM(quantity) AS totalItems FROM cart_items WHERE user_id = ?`, [req.session.userId])
+
+  res.json({ totalItems: result.totalItems || 0 })
+  
+}  
