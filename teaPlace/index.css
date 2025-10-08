@@ -74,7 +74,7 @@ main {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     position: relative;
     margin-top: 3em;
 }
@@ -89,7 +89,7 @@ h1:before {
 }
 
 p {
-    font-size: .9rem;
+    font-size: .9em;
     line-height: 1.4em;
     width: 90%;
     margin: 0 auto 2em;
@@ -139,4 +139,42 @@ p {
     left: 0;
     z-index: -1;
     opacity: 0.1;
+}
+
+@media (min-width: 500px) {
+    body {
+        font-size: 18px;
+    }
+    .menu, .exit {
+        display: none;
+    }
+    ul {
+        display: flex;
+        background: none;
+        height: unset;
+        position: unset;
+        text-transform: uppercase;
+    }
+    
+    ul li a {
+        font-size: .9em;
+        margin-left: unset;
+        padding: 0 .5rem;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .btn-container {
+        display: flex;
+        justify-content: center;
+    }
+    .cta {
+        padding: .7em 1.2em;
+    }
+    .outline {
+        margin-left: 1em;
+    }
 }
