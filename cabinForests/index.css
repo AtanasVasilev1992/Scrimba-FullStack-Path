@@ -21,7 +21,7 @@ ul {
 }
 
 img {
-    width: 0;
+    width: 100%;
 }
 
 header {
@@ -31,10 +31,14 @@ header {
     padding: .5em;
 }
 
-menu {
-    cursor: pointer;
+.logo {
+    color: black;
+    font-weight: bold;
 }
 
+.menu {
+    cursor: pointer;
+}
 
 nav ul {
     visibility: hidden;
@@ -63,4 +67,92 @@ nav ul li a {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.open-nav {
+    visibility: unset;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.forest-hero {
+    background: url('images/forest.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.wrapper {
+    padding: .5em;
+    text-align: center;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.subtitle {
+    padding: 3em 0 .5em;
+}
+
+h1 span {
+    display: block;
+    /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); */
+}
+
+.cta {
+    display: inline-block;
+    padding: 1em;
+    background: #72A84A;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 3em;
+    margin-top: 1em;
+}
+
+ul.featured-cabins {
+    width: 60%;
+    margin: 0 auto;
+}
+
+ul.featured-cabins li {
+    margin-bottom: 3em;
+}
+
+.cabin-img {
+    box-shadow: 10px 10px 10px rgba(0,0,0,.2);
+}
+
+.cabin-title {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.cabin-desc, ul.features li p, .left p {
+    line-height: 1.9em;
+    font-size: .8em;
+    margin-bottom: 2em;
+}
+
+.cabin-cta {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.cabin-cta:after {
+    position: absolute;
+    content: '';
+    bottom: -12px;
+    background: white;
+    width: 100%;
+    height: 1px;
+}
+
+.cabin-cta span {
+    color: white;
+    font-weight: bold;
+}
+
+.cabin-cta img {
+    width: 10px;
 }
