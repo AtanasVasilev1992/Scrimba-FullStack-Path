@@ -224,3 +224,52 @@ p.test-auth {
     width: 80%;
     opacity: .1;
 }
+
+@media (min-width: 550px) {
+    
+    .menu, .exit {
+        display: none;
+    }
+    
+    header {
+        padding: 1em;
+    }
+    
+    ul.nav {
+        visibility: unset;
+        opacity: 1;
+        background: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        position: unset;
+        height: auto;
+    }
+    
+    ul.nav li a {
+        font-size: .9em;
+        padding: 0 1em;
+        font-weight: normal;
+    }
+    
+    ul.nav li:last-child a {
+        padding-right: 0;
+    }
+    
+    ul.nav .active a {
+        font-weight: bold;
+    }
+    
+    ul.nav .res a {
+        color: #72A84A;
+        font-weight: bold;
+    }
+    
+    ul.featured-cabins {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-gap: 3em;
+    }
+    
+}
