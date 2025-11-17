@@ -9,11 +9,12 @@ export default function AssemblyEndgame() {
     const [guessedLetters, setGuessedLetters] = useState([])
 
     // Derived values
+    const numGuessesLeft = languages.length - 1
     const wrongGuessCount =
         guessedLetters.filter(letter => !currentWord.includes(letter)).length
     const isGameWon =
         currentWord.split("").every(letter => guessedLetters.includes(letter))
-    const isGameLost = wrongGuessCount >= languages.length - 1
+    const isGameLost = wrongGuessCount >= numGuessesLeft
     const isGameOver = isGameWon || isGameLost
     const lastGuessedLetter = guessedLetters[guessedLetters.length - 1]
     const isLastGuessIncorrect = lastGuessedLetter && !currentWord.includes(lastGuessedLetter)
@@ -47,13 +48,19 @@ export default function AssemblyEndgame() {
         )
     })
 
-    const letterElements = currentWord.split("").map((letter, index) => (
-        <span key={index}>
-            {guessedLetters.includes(letter) ? letter.toUpperCase() : ""}
-        </span>
-    ))
+     const letterElements = currentWord.split("").map((letter, index) => {
+        const shouldRevealLetter = isGameLost || guessedLetters.includes(letter)
+        const letterClassName = clsx(
+            isGameLost && !guessedLetters.includes(letter) && "missed-letter"
+        )
+        return (
+            <span key={index} className={letterClassName}>
+                {shouldRevealLetter ? letter.toUpperCase() : ""}
+            </span>
+        )
+    })
 
-    const keyboardElements = alphabet.split("").map(letter => {
+     const keyboardElements = alphabet.split("").map(letter => {
         const isGuessed = guessedLetters.includes(letter)
         const isCorrect = isGuessed && currentWord.includes(letter)
         const isWrong = isGuessed && !currentWord.includes(letter)
@@ -66,6 +73,7 @@ export default function AssemblyEndgame() {
             <button
                 className={className}
                 key={letter}
+                disabled={isGameOver}
                 onClick={() => addGuessedLetter(letter)}
             >
                 {letter.toUpperCase()}
