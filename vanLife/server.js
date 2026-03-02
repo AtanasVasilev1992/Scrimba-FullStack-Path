@@ -45,9 +45,7 @@ createServer({
 
         this.post("/login", (schema, request) => {
             const { email, password } = JSON.parse(request.requestBody)
-            // This is an extremely naive version of authentication. Please don't
-            // do this in the real world, and never save raw text passwords
-            // in your database 😇
+            // This is an extremely bad version of authentication. 
             const foundUser = schema.users.findBy({ email, password })
             if (!foundUser) {
                 return new Response(401, {}, { message: "No user with those credentials found!" })
